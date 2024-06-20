@@ -1,16 +1,15 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-import LoginPage from "../pages/LoginPage";
-import RegisterPage from "../pages/RegisterPage/RegisterPage";
-import ChooseSessions from "../pages/ChangeSessions";
-import CoachRequests from "../pages/CoachRequests";
+import LoginPage from "../pages/LoginPage/LoginPage";
+import HomePage from "../pages/HomePage/HomePage";
+import AdminPanel from "../pages/AdminPanel/AdminPanel";
 
 const Content = () => {
   return (
     <Routes>
+      <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/register" element={<RegisterPage />} />
-      <Route path="/choose-sessions" element={<ChooseSessions />} />
-      <Route path="/coach-requests" element={<CoachRequests />} />
+      <Route path="/admin-panel" element={<AdminPanel />} />
     </Routes>
   );
 };
